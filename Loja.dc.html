@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/base.css">
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/styles.css">
+  <script src="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <title>Vinhos — Vinícolo</title>
+  <meta name="description" content="Vinhos tintos, brancos, espumantes e rosés da Vinícolo. Ficha técnica completa de uva, região, safra e harmonização em cada rótulo.">
+  <style>
+    body { margin: 0; background: var(--surface-page); }
+    a { color: var(--text-link); }
+    a:hover { color: var(--text-link-hover); }
+  </style>
+</helmet>
+<dc-import name="AgeGate" hint-size="0,0" style="display:contents"></dc-import>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+  <dc-import name="Header" active="loja" hint-size="100%,80px"></dc-import>
+
+  <section style="background:var(--surface-sunken);padding:56px 20px 32px;background-image:url('assets/padrao-01-bege-full.png');background-size:380px;background-repeat:repeat">
+    <div style="max-width:1200px;margin:0 auto">
+      <h1 style="margin:0 0 10px;font-family:var(--font-display);font-size:var(--text-2xl);color:var(--text-heading)">Nossos vinhos</h1>
+      <p style="margin:0;font-family:var(--font-body);font-size:var(--text-base);color:var(--text-body);max-width:640px;line-height:var(--leading-normal)">Cada rótulo com categoria, país e região visíveis — para escolher com informação, não só pelo rótulo.</p>
+    </div>
+  </section>
+
+  <section style="max-width:1200px;margin:0 auto;padding:32px 20px 80px;width:100%;box-sizing:border-box;flex:1">
+    <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between;margin-bottom:28px">
+      <x-import component-from-global-scope="VinColoDesignSystem_84af61.Tabs" hint-size="auto,44px" tabs="{{ categoryTabs }}" active="{{ activeCategory }}" onChange="{{ setCategory }}"></x-import>
+      <x-import component-from-global-scope="VinColoDesignSystem_84af61.Select" hint-size="220px,66px" label="Faixa de preço" options="{{ priceOptions }}" value="{{ activePrice }}" onChange="{{ setPrice }}"></x-import>
+    </div>
+
+    <sc-if value="{{ hasResults }}" hint-placeholder-val="{{ true }}">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+      <sc-for list="{{ filtered }}" as="wine" hint-placeholder-count="6">
+        <div id="{{ wine.id }}" style="background:var(--surface-card);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);overflow:hidden;display:flex;flex-direction:column;scroll-margin-top:100px">
+          <image-slot id="loja-{{ wine.id }}" src="{{ wine.img }}" fit="contain" shape="rect" placeholder="Foto da garrafa" style="width:100%;aspect-ratio:4/5;background:var(--surface-sunken)"></image-slot>
+          <div style="padding:20px;display:flex;flex-direction:column;gap:10px;flex:1">
+            <x-import component-from-global-scope="VinColoDesignSystem_84af61.Badge" hint-size="auto,22px" tone="primary" style="align-self:flex-start">{{ wine.categoria }}</x-import>
+            <h3 style="margin:0;font-family:var(--font-display);font-size:var(--text-md);color:var(--text-heading)">{{ wine.nome }}</h3>
+            <dl style="margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 8px;font-family:var(--font-body);font-size:var(--text-sm)">
+              <dt style="color:var(--text-muted);margin:0">País</dt><dd style="color:var(--text-body);margin:0">{{ wine.pais }}</dd>
+              <dt style="color:var(--text-muted);margin:0">Região</dt><dd style="color:var(--text-body);margin:0">{{ wine.regiao }}</dd>
+            </dl>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:10px;gap:10px">
+              <span style="font-family:var(--font-display);font-size:var(--text-md);font-weight:700;color:var(--brand-primary)">{{ wine.precoFmt }}</span>
+              <sc-if value="{{ wine.emBreve }}" hint-placeholder-val="{{ false }}">
+              <x-import component-from-global-scope="VinColoDesignSystem_84af61.Badge" hint-size="auto,22px" tone="warm">Em breve</x-import>
+              </sc-if>
+              <sc-if value="{{ !wine.emBreve }}" hint-placeholder-val="{{ true }}">
+              <x-import component-from-global-scope="VinColoDesignSystem_84af61.Button" hint-size="auto,40px" variant="primary" size="sm" onClick="{{ wine.comprar }}">Comprar</x-import>
+              </sc-if>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    </sc-if>
+    <sc-if value="{{ !hasResults }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:60px 0;text-align:center">
+      <p style="font-family:var(--font-body);font-size:var(--text-base);color:var(--text-muted)">Nenhum vinho encontrado com esses filtros.</p>
+    </div>
+    </sc-if>
+  </section>
+
+  <div style="margin-top:auto">
+    <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+  </div>
+</div>
+<dc-import name="WhatsAppButton" hint-size="0,0" style="display:contents"></dc-import>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// Link de "Comprar": cada produto pode ter seu próprio p.url (página do produto na loja
+// Intelivino) — se não tiver, cai na home da loja. Quando a Vinícolo migrar para checkout
+// próprio (Tray), troque STORE_BASE_URL e/ou os p.url em data.js — nenhum outro código muda.
+const STORE_BASE_URL = 'https://loja.intelivino.com.br/emporio-serra-viva';
+
+function fmtBRL(v) { return 'R$ ' + v.toFixed(2).replace('.', ','); }
+
+class Component extends DCLogic {
+  state = { allProducts: [], activeCategory: 'todos', activePrice: 'todos' };
+
+  componentDidMount() {
+    import('./data.js').then(m => this.setState({ allProducts: m.PRODUCTS }));
+  }
+
+  renderVals() {
+    const imgFolder = (id) => id.startsWith('acc') ? 'accessories' : 'products';
+    const filtered = this.state.allProducts
+      .filter(p => this.state.activeCategory === 'todos' || p.categoria === this.state.activeCategory)
+      .filter(p => this.state.activePrice === 'todos' || p.faixa === this.state.activePrice)
+      .map(p => ({ ...p, precoFmt: fmtBRL(p.preco), img: `assets/${imgFolder(p.id)}/${p.id}.webp`, comprar: () => window.open(p.url || STORE_BASE_URL, '_blank') }));
+
+    return {
+      categoryTabs: [
+        { value: 'todos', label: 'Todos' },
+        { value: 'Tinto', label: 'Tinto' },
+        { value: 'Branco', label: 'Branco' },
+        { value: 'Espumante', label: 'Espumante' },
+        { value: 'Rosé', label: 'Rosé' },
+        { value: 'Acessório', label: 'Acessórios' },
+        { value: 'Camiseta', label: 'Camisetas' },
+      ],
+      activeCategory: this.state.activeCategory,
+      setCategory: (v) => this.setState({ activeCategory: v }),
+      priceOptions: [
+        { value: 'todos', label: 'Qualquer preço' },
+        { value: '0-50', label: 'Até R$ 50' },
+        { value: '50-100', label: 'R$ 50 – R$ 100' },
+        { value: '100-150', label: 'R$ 100 – R$ 150' },
+        { value: '150+', label: 'Acima de R$ 150' },
+      ],
+      activePrice: this.state.activePrice,
+      setPrice: (e) => this.setState({ activePrice: e.target.value }),
+      filtered,
+      hasResults: filtered.length > 0,
+    };
+  }
+}
+
+</script>
+</body>
+</html>

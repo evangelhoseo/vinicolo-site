@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/tokens/spacing.css">
+  <script src="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/_ds_bundle.js"></script>
+</helmet>
+<sc-if value="{{ showGate }}" hint-placeholder-val="{{ true }}">
+<div style="position:fixed;inset:0;z-index:9999;background:var(--surface-page);display:flex;align-items:center;justify-content:center;padding:24px">
+  <div style="max-width:420px;width:100%;display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center">
+    <img src="assets/logo-symbol-positiva.svg" alt="Vinícolo" style="height:64px">
+    <div>
+      <h1 style="margin:0 0 8px;font-family:var(--font-display);font-size:var(--text-xl);color:var(--text-heading)">Você tem 18 anos ou mais?</h1>
+      <p style="margin:0;font-family:var(--font-body);font-size:var(--text-base);color:var(--text-body);line-height:var(--leading-normal)">Este site contém informações sobre bebidas alcoólicas. Conforme a Lei Federal nº 9.294/96, é proibida a venda de bebidas alcoólicas a menores de 18 anos.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;width:100%">
+      <x-import component-from-global-scope="VinColoDesignSystem_84af61.Button" hint-size="100%,52px" variant="primary" size="lg" style="flex:1;min-width:180px" onClick="{{ confirm }}">Sim, sou maior de idade</x-import>
+      <x-import component-from-global-scope="VinColoDesignSystem_84af61.Button" hint-size="100%,52px" variant="secondary" size="lg" style="flex:1;min-width:140px" onClick="{{ deny }}">Não, sou menor</x-import>
+    </div>
+    <span style="font-family:var(--font-body);font-size:var(--text-xs);color:var(--text-muted)">Ao continuar, você declara ser maior de 18 anos. Beba com moderação.</span>
+  </div>
+</div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:700}}">
+class Component extends DCLogic {
+  state = { showGate: false };
+  componentDidMount() {
+    try {
+      if (localStorage.getItem('vinicolo_age_confirmed') !== 'yes') this.setState({ showGate: true });
+    } catch (e) { this.setState({ showGate: true }); }
+  }
+  renderVals() {
+    return {
+      showGate: this.state.showGate,
+      confirm: () => { try { localStorage.setItem('vinicolo_age_confirmed', 'yes'); } catch (e) {} this.setState({ showGate: false }); },
+      deny: () => { window.location.href = 'https://www.google.com'; },
+    };
+  }
+}
+
+</script>
+</body>
+</html>

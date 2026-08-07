@@ -1,0 +1,14 @@
+/* Brand fonts are Satoshi (body/UI) and Clash Display (headings/display), per vinicolo.framer.website.
+   Neither is distributed via Google Fonts or a fetchable CDN from this environment, so the closest
+   Google Fonts matches are substituted below: Plus Jakarta Sans for Satoshi, Bricolage Grotesque for
+   Clash Display. Flagged in readme.md — swap in the real Satoshi/Clash Display files if you have them. */
+@font-face{font-family:'Satoshi (sub: Plus Jakarta Sans)';font-style:normal;font-weight:400;font-display:swap;src:url('../assets/fonts/plus-jakarta-sans-400.woff2') format('woff2')}
+@font-face{font-family:'Satoshi (sub: Plus Jakarta Sans)';font-style:italic;font-weight:400;font-display:swap;src:url('../assets/fonts/plus-jakarta-sans-400-italic.woff2') format('woff2')}
+@font-face{font-family:'Satoshi (sub: Plus Jakarta Sans)';font-style:normal;font-weight:500;font-display:swap;src:url('../assets/fonts/plus-jakarta-sans-500.woff2') format('woff2')}
+@font-face{font-family:'Satoshi (sub: Plus Jakarta Sans)';font-style:normal;font-weight:600;font-display:swap;src:url('../assets/fonts/plus-jakarta-sans-600.woff2') format('woff2')}
+@font-face{font-family:'Satoshi (sub: Plus Jakarta Sans)';font-style:normal;font-weight:700;font-display:swap;src:url('../assets/fonts/plus-jakarta-sans-700.woff2') format('woff2')}
+@font-face{font-family:'Satoshi (sub: Plus Jakarta Sans)';font-style:normal;font-weight:800;font-display:swap;src:url('../assets/fonts/plus-jakarta-sans-800.woff2') format('woff2')}
+@font-face{font-family:'Clash Display (sub: Bricolage Grotesque)';font-style:normal;font-weight:500;font-display:swap;src:url('../assets/fonts/bricolage-grotesque-500.woff2') format('woff2')}
+@font-face{font-family:'Clash Display (sub: Bricolage Grotesque)';font-style:normal;font-weight:600;font-display:swap;src:url('../assets/fonts/bricolage-grotesque-600.woff2') format('woff2')}
+@font-face{font-family:'Clash Display (sub: Bricolage Grotesque)';font-style:normal;font-weight:700;font-display:swap;src:url('../assets/fonts/bricolage-grotesque-700.woff2') format('woff2')}
+@font-face{font-family:'Clash Display (sub: Bricolage Grotesque)';font-style:normal;font-weight:800;font-display:swap;src:url('../assets/fonts/bricolage-grotesque-800.woff2') format('woff2')}

@@ -1,0 +1,52 @@
+:root{
+/* --- Brand palette, verbatim from vinicolo.framer.website --- */
+--color-vinho-cabernet:#5c0d33;
+--color-laranja-terroir:#eb5a43;
+--color-lilas-bouquet:#c3b9dc;
+--color-azul-riviera:#b7e0ee;
+--color-bege-champagne:#fcf3e3;
+--color-white:#ffffff;
+--color-black:#1a0810;
+
+/* Neutral scale: derived (not given by brand) — desaturated tints along the Vinho Cabernet hue,
+   generated in OKLCH so they stay harmonious with the primary color rather than a generic gray ramp. */
+--color-neutral-050:oklch(98% 0.006 350);
+--color-neutral-100:oklch(95% 0.010 350);
+--color-neutral-200:oklch(89% 0.014 350);
+--color-neutral-300:oklch(80% 0.018 350);
+--color-neutral-400:oklch(65% 0.024 350);
+--color-neutral-500:oklch(50% 0.032 350);
+--color-neutral-600:oklch(38% 0.040 350);
+--color-neutral-700:oklch(28% 0.045 350);
+--color-neutral-800:oklch(20% 0.045 350);
+--color-neutral-900:oklch(14% 0.035 350);
+
+/* --- Semantic aliases --- */
+--brand-primary:var(--color-vinho-cabernet);
+--brand-primary-hover:#4a0a28;
+--brand-primary-press:#3a0820;
+
+--accent-warm:var(--color-laranja-terroir);   /* Laranja Terroir — support color, use sparingly */
+--accent-lilac:var(--color-lilas-bouquet);    /* Lilás Bouquet — support color, use sparingly */
+--accent-blue:var(--color-azul-riviera);      /* Azul Riviera — support color, use sparingly */
+--accent-cream:var(--color-bege-champagne);   /* Bege Champagne — warm neutral / background */
+
+--surface-page:var(--color-bege-champagne);
+--surface-card:var(--color-white);
+--surface-sunken:var(--color-neutral-050);
+--surface-inverse:var(--color-vinho-cabernet);
+
+--border-subtle:var(--color-neutral-200);
+--border-default:var(--color-neutral-300);
+
+--text-heading:var(--color-black);
+--text-body:var(--color-neutral-700);
+--text-muted:var(--color-neutral-500);
+--text-on-primary:var(--color-white);
+--text-link:var(--color-vinho-cabernet);
+--text-link-hover:var(--accent-warm);
+
+--state-success:#3f7a4f;
+--state-warning:var(--accent-warm);
+--state-danger:#b3261e;
+}

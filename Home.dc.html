@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/base.css">
+  <link rel="stylesheet" href="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/styles.css">
+  <script src="_ds/vin-colo-design-system-84af6143-e906-4176-9ce6-01943ac4ff38/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <title>Vinícolo — Vinhos, degustações e eventos em Bento Gonçalves</title>
+  <meta name="description" content="Vinícolo é uma vinícola da Serra Gaúcha. Conheça nossos vinhos, participe de degustações e eventos, e leia o blog sobre vinho escrito pelo Guilherme.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://vinicolo.com.br/#organization",
+    "name": "Vinícolo",
+    "url": "https://vinicolo.com.br/",
+    "description": "Vinícola na Serra Gaúcha que ajuda pessoas a ampliar o repertório de vinho, com transparência e paixão.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. Moacyr Laport Leitão, 53, Centro",
+      "addressLocality": "Cordeiro",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    },
+    "founder": { "@type": "Person", "name": "Guilherme Macedo", "jobTitle": "Sommelier" },
+    "sameAs": ["https://www.instagram.com/vinicolo.vinhos/"],
+    "telephone": "+5522999876373",
+    "priceRange": "R$35-R$150",
+    "servesCuisine": "Vinhos"
+  }
+  </script>
+  <style>
+    body { margin: 0; background: var(--surface-page); }
+    a { color: var(--text-link); }
+    a:hover { color: var(--text-link-hover); }
+  </style>
+</helmet>
+<dc-import name="AgeGate" hint-size="0,0" style="display:contents"></dc-import>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+  <dc-import name="Header" active="home" hint-size="100%,80px"></dc-import>
+
+  <section style="background:var(--color-vinho-cabernet);position:relative;overflow:hidden">
+    <div style="max-width:1200px;margin:0 auto;padding:56px 20px 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <span style="font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--accent-warm)">Loja de vinhos · Cordeiro, RJ</span>
+        <h1 style="margin:0;font-family:var(--font-display);font-size:clamp(2.5rem,5vw,var(--text-3xl));font-weight:700;line-height:var(--leading-tight);color:var(--color-bege-champagne)">Vinho para ampliar o repertório</h1>
+        <p style="margin:0;font-family:var(--font-body);font-size:var(--text-md);color:var(--accent-blue);line-height:var(--leading-normal);max-width:480px">Vinhos de qualidade e preço justo, com informação real sobre uva, região e safra — para quem tem curiosidade de descobrir o novo, não só de seguir rótulo.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px">
+          <button onClick="{{ goToLoja }}" style="height:52px;padding:0 28px;border-radius:var(--radius-pill);border:none;cursor:pointer;background:var(--accent-warm);color:#fff;font-family:var(--font-body);font-weight:var(--weight-semibold);font-size:var(--text-md)">Ver nossos vinhos</button>
+          <button onClick="{{ goToEventos }}" style="height:52px;padding:0 28px;border-radius:var(--radius-pill);border:1.5px solid var(--color-bege-champagne);cursor:pointer;background:transparent;color:var(--color-bege-champagne);font-family:var(--font-body);font-weight:var(--weight-semibold);font-size:var(--text-md)">Próximos eventos</button>
+        </div>
+      </div>
+      <image-slot id="home-hero" src="assets/hero-loja.png" shape="rounded" radius="24" placeholder="Foto da loja ou da sala de degustação" style="width:100%;aspect-ratio:4/3"></image-slot>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;padding:16px 12px;background:oklch(15% 0.04 350)">
+      <img src="assets/personagem-band-01.svg" alt="" style="height:48px;opacity:.9">
+      <img src="assets/personagem-band-03.svg" alt="" style="height:48px;opacity:.9">
+      <img src="assets/personagem-band-05.svg" alt="" style="height:48px;opacity:.9">
+      <img src="assets/personagem-band-07.svg" alt="" style="height:48px;opacity:.9">
+      <img src="assets/personagem-band-02.svg" alt="" style="height:48px;opacity:.9">
+      <img src="assets/personagem-band-09.svg" alt="" style="height:48px;opacity:.9">
+    </div>
+  </section>
+
+  <section style="max-width:1200px;margin:0 auto;padding:56px 20px;width:100%;box-sizing:border-box;background-image:url('assets/padrao-01-bege-full.png');background-size:420px;background-repeat:repeat;background-blend-mode:normal">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:32px">
+      <div>
+        <span style="font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--brand-primary)">Catálogo</span>
+        <h2 style="margin:6px 0 0;font-family:var(--font-display);font-size:var(--text-2xl);color:var(--text-heading)">Nossos vinhos</h2>
+      </div>
+      <a href="Loja.dc.html" style="font-family:var(--font-body);font-weight:600;font-size:var(--text-base);text-decoration:none">Ver todos os vinhos →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
+      <sc-for list="{{ products }}" as="wine" hint-placeholder-count="3">
+        <div style="background:var(--surface-card);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);overflow:hidden;display:flex;flex-direction:column">
+          <image-slot id="home-wine-{{ wine.id }}" src="{{ wine.img }}" fit="contain" shape="rect" placeholder="Foto da garrafa" style="width:100%;aspect-ratio:4/5;background:var(--surface-sunken)"></image-slot>
+          <div style="padding:18px;display:flex;flex-direction:column;gap:8px;flex:1">
+            <x-import component-from-global-scope="VinColoDesignSystem_84af61.Badge" hint-size="auto,22px" tone="primary" style="align-self:flex-start">{{ wine.categoria }}</x-import>
+            <h3 style="margin:0;font-family:var(--font-display);font-size:var(--text-md);color:var(--text-heading)">{{ wine.nome }}</h3>
+            <span style="font-family:var(--font-body);font-size:var(--text-sm);color:var(--text-muted)">{{ wine.pais }} · {{ wine.regiao }}</span>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:10px">
+              <span style="font-family:var(--font-display);font-size:var(--text-md);font-weight:700;color:var(--brand-primary)">{{ wine.precoFmt }}</span>
+              <a href="Loja.dc.html#{{ wine.id }}" style="font-family:var(--font-body);font-weight:600;font-size:var(--text-sm);text-decoration:none">Ver ficha →</a>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="background:var(--surface-sunken);padding:80px 0">
+    <div style="max-width:1200px;margin:0 auto;padding:0 20px;width:100%;box-sizing:border-box">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:32px">
+        <div>
+          <span style="font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--brand-primary)">Agenda</span>
+          <h2 style="margin:6px 0 0;font-family:var(--font-display);font-size:var(--text-2xl);color:var(--text-heading)">Próximos eventos</h2>
+        </div>
+        <a href="Eventos.dc.html" style="font-family:var(--font-body);font-weight:600;font-size:var(--text-base);text-decoration:none">Ver todos os eventos →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+        <sc-for list="{{ events }}" as="ev" hint-placeholder-count="2">
+          <a href="Eventos.dc.html#{{ ev.id }}" style="text-decoration:none;background:var(--surface-card);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);padding:24px;display:flex;flex-direction:column;gap:10px">
+            <x-import component-from-global-scope="VinColoDesignSystem_84af61.Badge" hint-size="auto,22px" tone="warm" style="align-self:flex-start">{{ ev.dataFmt }}</x-import>
+            <h3 style="margin:0;font-family:var(--font-display);font-size:var(--text-md);color:var(--text-heading)">{{ ev.titulo }}</h3>
+            <span style="font-family:var(--font-body);font-size:var(--text-sm);color:var(--text-muted)">{{ ev.local }}</span>
+            <span style="font-family:var(--font-body);font-size:var(--text-sm);font-weight:600;color:var(--brand-primary)">{{ ev.vagasRestantes }} vagas restantes</span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1200px;margin:0 auto;padding:80px 20px;width:100%;box-sizing:border-box">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:32px">
+      <div>
+        <span style="font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--brand-primary)">Blog</span>
+        <h2 style="margin:6px 0 0;font-family:var(--font-display);font-size:var(--text-2xl);color:var(--text-heading)">Do blog</h2>
+      </div>
+      <a href="Blog.dc.html" style="font-family:var(--font-body);font-weight:600;font-size:var(--text-base);text-decoration:none">Ver todos os posts →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+      <sc-for list="{{ posts }}" as="post" hint-placeholder-count="3">
+        <a href="Post.dc.html#{{ post.id }}" style="text-decoration:none;display:flex;flex-direction:column;gap:12px">
+          <image-slot id="home-post-{{ post.id }}" shape="rounded" radius="16" placeholder="Imagem do post" style="width:100%;aspect-ratio:16/10"></image-slot>
+          <span style="font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--brand-primary)">{{ post.categoria }}</span>
+          <h3 style="margin:0;font-family:var(--font-display);font-size:var(--text-md);color:var(--text-heading);line-height:var(--leading-snug)">{{ post.titulo }}</h3>
+          <span style="font-family:var(--font-body);font-size:var(--text-sm);color:var(--text-muted)">{{ post.dataFmt }} · {{ post.leitura }} de leitura</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <div style="margin-top:auto">
+    <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+  </div>
+</div>
+<dc-import name="WhatsAppButton" hint-size="0,0" style="display:contents"></dc-import>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+function fmtBRL(v) { return 'R$ ' + v.toFixed(2).replace('.', ','); }
+function fmtDataCurta(iso) {
+  const d = new Date(iso + 'T00:00:00');
+  return d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' }).replace('.', '');
+}
+
+class Component extends DCLogic {
+  state = { products: [], events: [], posts: [] };
+
+  componentDidMount() {
+    import('./data.js').then(m => {
+      this.setState({
+        products: m.PRODUCTS.slice(0, 3).map(p => ({ ...p, precoFmt: fmtBRL(p.preco), img: `assets/products/${p.id}.webp` })),
+        events: m.EVENTOS.filter(e => e.status === 'upcoming').slice(0, 2).map(e => ({ ...e, dataFmt: fmtDataCurta(e.data) })),
+        posts: m.POSTS.slice(0, 3).map(p => ({ ...p, dataFmt: fmtDataCurta(p.data) })),
+      });
+    });
+  }
+
+  renderVals() {
+    return {
+      products: this.state.products,
+      events: this.state.events,
+      posts: this.state.posts,
+      goToLoja: () => { window.location.href = 'Loja.dc.html'; },
+      goToEventos: () => { window.location.href = 'Eventos.dc.html'; },
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+:root{
+/* Spacing scale: 4px base unit — not specified by the brand guide, standard choice for digital layout. */
+--space-1:4px;
+--space-2:8px;
+--space-3:12px;
+--space-4:16px;
+--space-5:20px;
+--space-6:24px;
+--space-8:32px;
+--space-10:40px;
+--space-12:48px;
+--space-16:64px;
+--space-20:80px;
+--space-24:96px;
+
+/* Corner radius: rounded/organic, in step with the brand's soft illustrated character and rounded
+   logotype letterforms rather than the sharp label-and-ledger look of classic wine branding. */
+--radius-sm:10px;
+--radius-md:16px;
+--radius-lg:24px;
+--radius-pill:999px;
+
+/* Shadow: soft elevation tinted with the primary wine color instead of neutral black, so cards read
+   warm rather than corporate. */
+--shadow-sm:0 2px 8px -2px oklch(20% 0.06 350 / 0.14);
+--shadow-md:0 8px 24px -6px oklch(20% 0.07 350 / 0.18);
+--shadow-lg:0 20px 48px -12px oklch(18% 0.08 350 / 0.22);
+}
