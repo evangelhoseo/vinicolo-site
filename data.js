@@ -6,7 +6,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Farroupilha",
     "preco": 75,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/db60c891-3abe-4924-aa80-f33b38d42b19"
   },
   {
     "id": "p02",
@@ -15,7 +16,8 @@ export const PRODUCTS = [
     "pais": "Itália",
     "regiao": "Abruzo",
     "preco": 81,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/84b28f76-43d9-41d3-b9f9-e405c40ac95e"
   },
   {
     "id": "p03",
@@ -24,7 +26,8 @@ export const PRODUCTS = [
     "pais": "Argentina",
     "regiao": "Mendoza",
     "preco": 65,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/baca42a6-2aff-4dc9-89b2-d557f4100b15"
   },
   {
     "id": "p04",
@@ -33,7 +36,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale do Curicó",
     "preco": 125,
-    "faixa": "100-150"
+    "faixa": "100-150",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/c3847a3a-2c16-4a9c-8ed5-d9bae8e3771f"
   },
   {
     "id": "p05",
@@ -42,7 +46,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale do Bio Bio",
     "preco": 82,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/388049e9-c46e-4195-a667-3d0eac217620"
   },
   {
     "id": "p06",
@@ -51,7 +56,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Farroupilha",
     "preco": 55,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/8be8c7a0-c2aa-4212-9aab-12683a1170d8"
   },
   {
     "id": "p07",
@@ -60,7 +66,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Farroupilha",
     "preco": 55,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/a962ea30-7556-477a-a690-9eab4f4a4cb5"
   },
   {
     "id": "p08",
@@ -69,7 +76,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Farroupilha",
     "preco": 55,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/c406da7d-b99a-47cc-9b90-691d15560982"
   },
   {
     "id": "p09",
@@ -78,7 +86,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Serra Gaúcha",
     "preco": 55,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/9e1ea120-53ea-43ea-887b-3b5b95444d55"
   },
   {
     "id": "p10",
@@ -87,7 +96,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Serra Gaúcha",
     "preco": 55,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/6977c8b9-297f-4774-98af-7e82753cb959"
   },
   {
     "id": "p11",
@@ -96,7 +106,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Farroupilha",
     "preco": 55,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/a61acb1a-1097-4a88-8096-6e145f5068b4"
   },
   {
     "id": "p12",
@@ -105,7 +116,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Garibaldi",
     "preco": 38.9,
-    "faixa": "0-50"
+    "faixa": "0-50",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/ab45b506-db49-40d0-9641-f815b9f619d7"
   },
   {
     "id": "p13",
@@ -114,7 +126,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Farroupilha",
     "preco": 55,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/db4514b6-7052-4d77-856b-2fffef012805"
   },
   {
     "id": "p14",
@@ -123,7 +136,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Campanha Gaúcha",
     "preco": 109,
-    "faixa": "100-150"
+    "faixa": "100-150",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/b28d2e11-eec2-4b96-820e-4f5c90df3899"
   },
   {
     "id": "p15",
@@ -132,7 +146,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Campanha Gaúcha",
     "preco": 109,
-    "faixa": "100-150"
+    "faixa": "100-150",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/e2a4d3af-831c-4bc8-93c3-81759a73092f"
   },
   {
     "id": "p16",
@@ -141,7 +156,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale Central",
     "preco": 59.9,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/4897d50c-19d7-4f47-b75b-5d0d63799686"
   },
   {
     "id": "p17",
@@ -150,7 +166,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Farroupilha",
     "preco": 49,
-    "faixa": "0-50"
+    "faixa": "0-50",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/4fc4ace6-5865-47c0-adea-c574cdb65bb1"
   },
   {
     "id": "p18",
@@ -159,7 +176,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Farroupilha",
     "preco": 69,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/5ac9ba99-90de-415d-9641-d7642c8db5cb"
   },
   {
     "id": "p19",
@@ -168,7 +186,8 @@ export const PRODUCTS = [
     "pais": "Argentina",
     "regiao": "Mendoza",
     "preco": 84,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/93c8a8d1-f9cb-4da9-bcbb-c48576cace50"
   },
   {
     "id": "p20",
@@ -177,7 +196,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale Central",
     "preco": 39.9,
-    "faixa": "0-50"
+    "faixa": "0-50",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/d594ba69-0f50-407c-ba92-f7c816e001fb"
   },
   {
     "id": "p21",
@@ -186,7 +206,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale Central",
     "preco": 65.9,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/58f53a35-8421-49a0-87fb-9d64253446f4"
   },
   {
     "id": "p22",
@@ -195,7 +216,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale Central",
     "preco": 65.9,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/80bf8cdb-600a-4f45-8df9-45718a47da89"
   },
   {
     "id": "p23",
@@ -204,7 +226,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale do Curicó",
     "preco": 69,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/3f90cc1c-16ff-4966-bdd7-89f36d2bf084"
   },
   {
     "id": "p24",
@@ -213,7 +236,8 @@ export const PRODUCTS = [
     "pais": "Espanha",
     "regiao": "Castilla",
     "preco": 85.9,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/05ac7d62-d597-4abe-ac7c-9516fa72a460"
   },
   {
     "id": "p25",
@@ -222,7 +246,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Campanha Gaúcha",
     "preco": 99,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/947698bb-aae1-4b4f-b744-b7656c545fa5"
   },
   {
     "id": "p26",
@@ -231,7 +256,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale Central",
     "preco": 59.9,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/b1a7fe08-029a-4c97-a289-8543e2119b55"
   },
   {
     "id": "p27",
@@ -240,7 +266,8 @@ export const PRODUCTS = [
     "pais": "Itália",
     "regiao": "Emília-Romagna",
     "preco": 81,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/cdc2443a-5471-47f7-8855-8e1c4c2ed5fd"
   },
   {
     "id": "p28",
@@ -249,7 +276,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Farroupilha",
     "preco": 149,
-    "faixa": "100-150"
+    "faixa": "100-150",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/72729685-35cc-45c7-b559-ac5ee23ca5f1"
   },
   {
     "id": "p29",
@@ -258,7 +286,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Vale Dos Vinhedos",
     "preco": 175,
-    "faixa": "150+"
+    "faixa": "150+",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/c1e20f63-2649-4769-82f3-5a7aa7a370b5"
   },
   {
     "id": "p30",
@@ -267,7 +296,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Vale Dos Vinhedos",
     "preco": 175,
-    "faixa": "150+"
+    "faixa": "150+",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/6098a724-49ac-44f7-9e90-df1efebb6401"
   },
   {
     "id": "p31",
@@ -276,7 +306,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale Central",
     "preco": 68.5,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/ec24707f-4877-4edb-ae16-bf881e86475f"
   },
   {
     "id": "p32",
@@ -285,7 +316,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale Central",
     "preco": 68.5,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/61e0e08b-92b5-4811-af94-47497c1430f7"
   },
   {
     "id": "p33",
@@ -294,7 +326,8 @@ export const PRODUCTS = [
     "pais": "Argentina",
     "regiao": "Mendoza",
     "preco": 65,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/b966c149-d58a-4663-810a-1780cab8a4b4"
   },
   {
     "id": "p34",
@@ -303,7 +336,8 @@ export const PRODUCTS = [
     "pais": "Argentina",
     "regiao": "Mendoza",
     "preco": 129,
-    "faixa": "100-150"
+    "faixa": "100-150",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/ea267c63-bab4-457e-ac9a-1de017e7c2c3"
   },
   {
     "id": "p35",
@@ -312,7 +346,8 @@ export const PRODUCTS = [
     "pais": "Argentina",
     "regiao": "Mendoza",
     "preco": 129,
-    "faixa": "100-150"
+    "faixa": "100-150",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/6dd240d9-2244-4330-a3fe-f26122f03a2e"
   },
   {
     "id": "p36",
@@ -321,7 +356,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Serra Gaúcha",
     "preco": 75,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/78cda245-43f5-4c01-a7fd-04217f6a6560"
   },
   {
     "id": "p37",
@@ -330,7 +366,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Serra Gaúcha",
     "preco": 75,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/92304d54-3b57-4b35-b99c-81722ac7b411"
   },
   {
     "id": "p38",
@@ -339,7 +376,8 @@ export const PRODUCTS = [
     "pais": "Argentina",
     "regiao": "Mendoza",
     "preco": 84,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/8af877dc-785e-4015-8512-3e851496736a"
   },
   {
     "id": "p39",
@@ -348,7 +386,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale Central",
     "preco": 45,
-    "faixa": "0-50"
+    "faixa": "0-50",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/1d363e18-d981-43ff-b13b-c4cfaa21d4f0"
   },
   {
     "id": "p40",
@@ -357,7 +396,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale Central",
     "preco": 39.9,
-    "faixa": "0-50"
+    "faixa": "0-50",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/e9b5fcc3-2ddb-4fb7-a973-33cf4f8434f3"
   },
   {
     "id": "p41",
@@ -366,7 +406,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale Central",
     "preco": 55,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/cbb2f891-17ce-4dc8-9146-aca0dfc5ee14"
   },
   {
     "id": "p42",
@@ -375,7 +416,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Vale Dos Vinhedos",
     "preco": 129,
-    "faixa": "100-150"
+    "faixa": "100-150",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/aa1a5b88-7543-403a-a084-8a68544fe263"
   },
   {
     "id": "p43",
@@ -384,7 +426,8 @@ export const PRODUCTS = [
     "pais": "Brasil",
     "regiao": "Vale Dos Vinhedos",
     "preco": 129,
-    "faixa": "100-150"
+    "faixa": "100-150",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/c9d33ef0-d8de-488e-b31a-4110d83aeff3"
   },
   {
     "id": "p44",
@@ -393,7 +436,8 @@ export const PRODUCTS = [
     "pais": "Argentina",
     "regiao": "Mendoza",
     "preco": 83.9,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/8915c275-bf1a-424c-8a5b-1c7c1a3e301e"
   },
   {
     "id": "p45",
@@ -402,7 +446,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale Central",
     "preco": 39.9,
-    "faixa": "0-50"
+    "faixa": "0-50",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/91100b17-b01f-4ae8-8560-d64b234ef4ad"
   },
   {
     "id": "p46",
@@ -411,7 +456,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale do Colchágua",
     "preco": 97,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/4935d1d4-8131-4f7c-bd96-d435e42a9142"
   },
   {
     "id": "p47",
@@ -420,7 +466,8 @@ export const PRODUCTS = [
     "pais": "Argentina",
     "regiao": "Valle de Uco",
     "preco": 79.9,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/823306fb-b2fc-4e86-9c5f-226453b3f9be"
   },
   {
     "id": "p48",
@@ -429,7 +476,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale Central",
     "preco": 39.9,
-    "faixa": "0-50"
+    "faixa": "0-50",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/ea4abefd-61b7-4c05-9e25-a855f89b9c41"
   },
   {
     "id": "p49",
@@ -438,7 +486,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale Central",
     "preco": 39.9,
-    "faixa": "0-50"
+    "faixa": "0-50",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/6e0bf47e-3220-44b5-991a-980042768622"
   },
   {
     "id": "p50",
@@ -447,7 +496,8 @@ export const PRODUCTS = [
     "pais": "Chile",
     "regiao": "Vale Central",
     "preco": 39.9,
-    "faixa": "0-50"
+    "faixa": "0-50",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/9528858b-6d5a-48f6-8ede-29f98f6fc106"
   },
   {
     "id": "p51",
@@ -456,7 +506,8 @@ export const PRODUCTS = [
     "pais": "Austrália",
     "regiao": "South Eastern",
     "preco": 69,
-    "faixa": "50-100"
+    "faixa": "50-100",
+    "url": "https://loja.intelivino.com.br/emporio-serra-viva/label/6280fb49-b425-4b07-b932-020c1de45788"
   },
   {
     "id": "c01",
