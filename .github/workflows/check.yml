@@ -1,0 +1,19 @@
+# Não publica nada: quem publica é o GitHub Pages (branch main, pasta raiz).
+# Este job só marca o commit com X vermelho se o build.py achar index.html dessincronizado,
+# .nojekyll faltando ou referência local quebrada — sinal para corrigir/reverter na hora.
+name: Checar site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python build.py --check
