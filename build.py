@@ -1,4 +1,4 @@
-"""Build do site da Vinícolo (export dc-runtime publicado no GitHub Pages).
+"""Build do site da Vinicolo (export dc-runtime publicado no GitHub Pages).
 
 Não há etapa de compilação: o Pages serve os arquivos do repo como estão. O build:
 
@@ -9,8 +9,10 @@ Não há etapa de compilação: o Pages serve os arquivos do repo como estão. O
   2. index.html = cópia exata de Home.dc.html (a raiz do domínio precisa servir a Home);
   3. gera robots.txt, sitemap.xml e, com DOMINIO_LIGADO, o CNAME;
   4. valida: .nojekyll presente (sem ele o Pages apaga a pasta _ds/ e o site perde todo o
-     estilo), toda referência local aponta para um arquivo que existe e todo produto do
-     data.js tem foto.
+     estilo) e toda referência local aponta para um arquivo que existe.
+
+O catálogo de vinhos não fica no site: é a loja virtual na Intelivino (LOJA_VIRTUAL).
+Loja.dc.html só redireciona para ela, por isso não está em PAGINAS.
 
 Uso:
   python build.py           # gera e valida
@@ -33,20 +35,21 @@ DOMINIO_LIGADO = True
 
 OG_IMAGEM = "og-image.jpg"
 FAVICON = "assets/logo-symbol-positiva.svg"
+LOJA_VIRTUAL = "https://loja.intelivino.com.br/vinicolo"
 
 # arquivo -> (caminho no domínio, vai para o sitemap, title/description se o helmet for template)
 PAGINAS = {
     "Home.dc.html": ("", True, None),
-    "Loja.dc.html": ("Loja.dc.html", True, None),
     "Eventos.dc.html": ("Eventos.dc.html", True, None),
-    "Blog.dc.html": ("Blog.dc.html", True, None),
     "Sobre.dc.html": ("Sobre.dc.html", True, None),
     "Contato.dc.html": ("Contato.dc.html", True, None),
+    # Blog saiu do menu (31/10/2026) e fica fora do sitemap até o cliente decidir se volta.
+    "Blog.dc.html": ("Blog.dc.html", False, None),
     # Detalhe escolhido pelo #hash: para o Google é uma URL só, então fica fora do sitemap.
-    "Evento.dc.html": ("Evento.dc.html", False, ("Evento — Vinícolo",
-                       "Degustações, jantares harmonizados e eventos da Vinícolo em Cordeiro, RJ.")),
-    "Post.dc.html": ("Post.dc.html", False, ("Blog — Vinícolo",
-                     "Notas de degustação, harmonização e bastidores da Vinícolo, escritos pelo Guilherme.")),
+    "Evento.dc.html": ("Evento.dc.html", False, ("Evento — Vinicolo",
+                       "Degustações, jantares harmonizados e eventos da Vinicolo em Cordeiro, RJ.")),
+    "Post.dc.html": ("Post.dc.html", False, ("Blog — Vinicolo",
+                     "Notas de degustação, harmonização e bastidores da Vinicolo, escritos pelo Guilherme.")),
 }
 
 REF_HTML = re.compile(r'''(?:src|href)=["']([^"'#?]+)''')
@@ -76,7 +79,7 @@ def bloco_seo(arquivo, texto):
         f'<link rel="icon" href="{FAVICON}" type="image/svg+xml">',
         '<meta property="og:type" content="website">',
         '<meta property="og:locale" content="pt_BR">',
-        '<meta property="og:site_name" content="Vinícolo">',
+        '<meta property="og:site_name" content="Vinicolo">',
         f'<meta property="og:title" content="{e(titulo)}">',
         f'<meta property="og:description" content="{e(descricao)}">',
         f'<meta property="og:url" content="{url}">',
@@ -129,6 +132,9 @@ def validar():
         erros.append(".nojekyll ausente — o Pages vai ignorar a pasta _ds/")
     if not (RAIZ / OG_IMAGEM).exists():
         erros.append(f"{OG_IMAGEM} ausente — é a imagem de compartilhamento de todas as páginas")
+    loja = RAIZ / "Loja.dc.html"
+    if loja.exists() and LOJA_VIRTUAL not in loja.read_text(encoding="utf-8"):
+        erros.append(f"Loja.dc.html deveria só redirecionar para {LOJA_VIRTUAL}")
     if (RAIZ / "CNAME").exists() and not DOMINIO_LIGADO:
         erros.append("CNAME existe mas DOMINIO_LIGADO = False no build.py")
 
@@ -140,14 +146,6 @@ def validar():
     for alvo in referencias(RAIZ / "data.js", REF_DATA):
         if not (RAIZ / alvo).exists():
             erros.append(f"data.js: referência quebrada -> {alvo}")
-
-    # A Loja monta a foto como assets/<products|accessories>/<id>.webp (ver imgFolder no
-    # Loja.dc.html), então produto novo no data.js sem a foto correspondente vira imagem quebrada.
-    produtos = (RAIZ / "data.js").read_text(encoding="utf-8").split("export const", 2)[1]
-    for pid in re.findall(r'"id":\s*"([^"]+)"', produtos):
-        pasta = "accessories" if pid.startswith("acc") else "products"
-        if not (RAIZ / "assets" / pasta / f"{pid}.webp").exists():
-            erros.append(f"data.js: produto {pid} sem foto em assets/{pasta}/{pid}.webp")
     return erros
 
 

@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- seo:inicio -->
-<title>Blog — Vinícolo</title>
-<meta name="description" content="Notas de degustação, harmonização e bastidores da Vinícolo, escritos pelo Guilherme.">
+<title>Blog — Vinicolo</title>
+<meta name="description" content="Notas de degustação, harmonização e bastidores da Vinicolo, escritos pelo Guilherme.">
 <link rel="canonical" href="https://vinicolo.com.br/Post.dc.html">
 <link rel="icon" href="assets/logo-symbol-positiva.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="Vinícolo">
-<meta property="og:title" content="Blog — Vinícolo">
-<meta property="og:description" content="Notas de degustação, harmonização e bastidores da Vinícolo, escritos pelo Guilherme.">
+<meta property="og:site_name" content="Vinicolo">
+<meta property="og:title" content="Blog — Vinicolo">
+<meta property="og:description" content="Notas de degustação, harmonização e bastidores da Vinicolo, escritos pelo Guilherme.">
 <meta property="og:url" content="https://vinicolo.com.br/Post.dc.html">
 <meta property="og:image" content="https://vinicolo.com.br/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -74,7 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <image-slot id="autor-guilherme" src="assets/guilherme-02.png" shape="circle" placeholder="Foto do Guilherme" style="width:64px;height:64px;flex-shrink:0"></image-slot>
         <div style="display:flex;flex-direction:column;gap:6px">
           <span style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;color:var(--text-heading)">Guilherme Macedo</span>
-          <p style="margin:0;font-family:var(--font-body);font-size:var(--text-sm);color:var(--text-body);line-height:var(--leading-snug)">Sommelier com mais de 10 anos de experiência, à frente da Vinícolo em Cordeiro, RJ. Seleciona e prova cada rótulo do catálogo e escreve sobre vinho para quem quer aprender sem soberba.</p>
+          <p style="margin:0;font-family:var(--font-body);font-size:var(--text-sm);color:var(--text-body);line-height:var(--leading-snug)">Sommelier com mais de 10 anos de experiência, à frente da Vinicolo em Cordeiro, RJ. Seleciona e prova cada rótulo do catálogo e escreve sobre vinho para quem quer aprender sem soberba.</p>
         </div>
       </div>
     </article>
@@ -103,7 +103,7 @@ class Component extends DCLogic {
       if (!found) { this.setState({ notFound: true }); return; }
       const post = { ...found, dataFmt: fmtData(found.data) };
       this.setState({ post });
-      document.title = `${post.titulo} — Vinícolo`;
+      document.title = `${post.titulo} — Vinicolo`;
       const ld = document.createElement('script');
       ld.type = 'application/ld+json';
       ld.text = JSON.stringify({
@@ -111,7 +111,7 @@ class Component extends DCLogic {
         headline: post.titulo, description: post.resumo,
         datePublished: post.data,
         author: { '@type': 'Person', name: 'Guilherme' },
-        publisher: { '@type': 'Organization', name: 'Vinícolo' },
+        publisher: { '@type': 'Organization', name: 'Vinicolo' },
         mainEntityOfPage: 'https://vinicolo.com.br/Post.dc.html#' + post.id,
       });
       document.head.appendChild(ld);
@@ -122,8 +122,8 @@ class Component extends DCLogic {
     const post = this.state.post;
     return {
       post, notFound: this.state.notFound,
-      pageTitle: post ? `${post.titulo} — Vinícolo` : 'Blog — Vinícolo',
-      pageDescription: post ? post.resumo : 'Blog da Vinícolo.',
+      pageTitle: post ? `${post.titulo} — Vinicolo` : 'Blog — Vinicolo',
+      pageDescription: post ? post.resumo : 'Blog da Vinicolo.',
     };
   }
 }

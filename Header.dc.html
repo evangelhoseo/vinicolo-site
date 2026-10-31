@@ -19,14 +19,13 @@
 <header style="position:sticky;top:0;z-index:200;background:var(--surface-page);border-bottom:1px solid var(--border-subtle)">
   <div style="max-width:1200px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
     <a href="Home.dc.html" style="display:flex;align-items:center;flex-shrink:0">
-      <img src="assets/logo-signature-positiva.svg" alt="Vinícolo" style="height:42px;display:block">
+      <img src="assets/logo-signature-positiva.svg" alt="Vinicolo" style="height:42px;display:block">
     </a>
     <sc-if value="{{ !isMobile }}" hint-placeholder-val="{{ true }}">
     <nav style="display:flex;align-items:center;gap:28px">
       <a href="Home.dc.html" style="{{ linkStyle_home }}">Início</a>
-      <a href="Loja.dc.html" style="{{ linkStyle_loja }}">Vinhos</a>
+      <a href="https://loja.intelivino.com.br/vinicolo" target="_blank" rel="noopener" style="{{ linkStyle_loja }}">Loja virtual</a>
       <a href="Eventos.dc.html" style="{{ linkStyle_eventos }}">Eventos</a>
-      <a href="Blog.dc.html" style="{{ linkStyle_blog }}">Blog</a>
       <a href="Sobre.dc.html" style="{{ linkStyle_sobre }}">Sobre</a>
       <a href="Contato.dc.html" style="{{ linkStyle_contato }}">Contato</a>
     </nav>
@@ -45,9 +44,8 @@
   <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
   <div style="{{ mobileMenuStyle }}">
     <a href="Home.dc.html" style="{{ linkStyle_home }};font-size:var(--text-md)">Início</a>
-    <a href="Loja.dc.html" style="{{ linkStyle_loja }};font-size:var(--text-md)">Vinhos</a>
+    <a href="https://loja.intelivino.com.br/vinicolo" target="_blank" rel="noopener" style="{{ linkStyle_loja }};font-size:var(--text-md)">Loja virtual</a>
     <a href="Eventos.dc.html" style="{{ linkStyle_eventos }};font-size:var(--text-md)">Eventos</a>
-    <a href="Blog.dc.html" style="{{ linkStyle_blog }};font-size:var(--text-md)">Blog</a>
     <a href="Sobre.dc.html" style="{{ linkStyle_sobre }};font-size:var(--text-md)">Sobre</a>
     <a href="Contato.dc.html" style="{{ linkStyle_contato }};font-size:var(--text-md)">Contato</a>
     <div style="padding-top:8px">
@@ -58,7 +56,7 @@
 </header>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:80},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;home&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;loja&quot;,&quot;eventos&quot;,&quot;blog&quot;,&quot;sobre&quot;,&quot;contato&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:80},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;home&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;eventos&quot;,&quot;sobre&quot;,&quot;contato&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   state = { isMobile: typeof window !== 'undefined' ? window.innerWidth < 900 : false, menuOpen: false };
 
@@ -82,12 +80,11 @@ class Component extends DCLogic {
       linkStyle_home: this.linkStyleFor('home'),
       linkStyle_loja: this.linkStyleFor('loja'),
       linkStyle_eventos: this.linkStyleFor('eventos'),
-      linkStyle_blog: this.linkStyleFor('blog'),
       linkStyle_sobre: this.linkStyleFor('sobre'),
       linkStyle_contato: this.linkStyleFor('contato'),
       mobileMenuStyle: `display:flex;flex-direction:column;gap:14px;padding:${this.state.menuOpen ? '4px 20px 20px' : '0 20px'};max-height:${this.state.menuOpen ? '400px' : '0'};overflow:hidden;transition:all 200ms ease;border-top:${this.state.menuOpen ? '1px solid var(--border-subtle)' : 'none'}`,
       toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
-      goToLoja: () => { window.location.href = 'Loja.dc.html'; },
+      goToLoja: () => { window.open('https://loja.intelivino.com.br/vinicolo', '_blank', 'noopener'); },
     };
   }
 }

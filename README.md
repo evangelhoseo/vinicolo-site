@@ -1,6 +1,6 @@
-# Vinícolo — site institucional e loja
+# Vinicolo — site institucional e loja
 
-Site da **Vinícolo** (vinhos). Cliente da Agência Foco Digital.
+Site da **Vinicolo** (vinhos). Cliente da Agência Foco Digital.
 
 - **No ar:** https://vinicolo.com.br/ (o endereço github.io redireciona para ele)
 - **Hospedagem:** GitHub Pages, branch `main`, pasta raiz. Push na `main` republica em ~1 min.
@@ -15,12 +15,11 @@ página e carrega React/Babel do unpkg em runtime. Não há etapa de compilaçã
 
 ```
 Home.dc.html          ← páginas (editar à mão)
-Loja.dc.html  Eventos.dc.html  Evento.dc.html  Blog.dc.html  Post.dc.html
+Eventos.dc.html  Evento.dc.html  Blog.dc.html  Post.dc.html  (Blog/Post: fora do menu e do sitemap)
+Loja.dc.html          ← só redireciona para a loja virtual (Intelivino)
 Sobre.dc.html  Contato.dc.html
 Header / Footer / AgeGate / WhatsAppButton .dc.html  ← componentes importados pelas páginas
-data.js               ← catálogo (PRODUCTS), EVENTOS e POSTS
-assets/products/      ← foto de cada vinho: <id>.webp
-assets/accessories/   ← foto de cada acessório: acc*.webp
+data.js               ← EVENTOS e POSTS
 _ds/                  ← design system exportado (tokens CSS + _ds_bundle.js) — não editar
 support.js image-slot.js ← runtime dc — não editar
 index.html            ← GERADO: cópia exata de Home.dc.html
@@ -41,8 +40,10 @@ Os links internos apontam direto para os arquivos (`Loja.dc.html`, `Sobre.dc.htm
 4. Commit direto na `main` e push → o Pages republica; o Actions **Checar site** roda o
    `build.py --check` no mesmo commit
 
-Produto novo na loja = entrada em `PRODUCTS` no `data.js` **+** a foto `assets/products/<id>.webp`
-(ou `assets/accessories/` se o id começar com `acc`). O `build.py` acusa foto faltando.
+**Vinhos não ficam no site** (pedido do cliente, 31/10/2026): menu, Home e o antigo
+`Loja.dc.html` apontam para a loja virtual https://loja.intelivino.com.br/vinicolo
+(`LOJA_VIRTUAL` no `build.py`). Preço e estoque se mantêm lá. O catálogo antigo
+(`PRODUCTS` + fotos de garrafa) está no histórico, na tag `pre-ajustes-guilherme-2026-10-31`.
 
 ## Preview local
 
@@ -70,7 +71,8 @@ Precisa ser servido por HTTP — abrir o arquivo direto (`file://`) não funcion
   Ou, para restaurar tudo a partir de uma tag: `git checkout <tag> -- . && git commit -m "rollback para <tag>" && git push`.
 - Nunca `push --force` na `main`.
 
-Tags existentes: `v2026-08-07` — estado publicado antes de o repo ganhar `build.py`/Actions.
+Tags existentes: `v2026-08-07` — estado publicado antes de o repo ganhar `build.py`/Actions;
+`pre-ajustes-guilherme-2026-10-31` — antes de tirar loja/blog do site e reescrever o Sobre.
 
 ## Ligar o domínio vinicolo.com.br
 
@@ -115,7 +117,7 @@ movimento.
   exige redirecionamento, que o Pages não faz.
 - **Evento e Post escolhem o item pelo `#hash`**, que o Google ignora: para ele são uma URL só
   cada. Ficam fora do sitemap com title genérico.
-- **Reexportar do Claude Design sobrescreve ajustes manuais** (contato, links de compra no
-  `data.js`, fotos otimizadas). Comparar com `git diff` antes de commitar um export novo.
+- **Reexportar do Claude Design sobrescreve ajustes manuais** (contato, loja virtual, textos do
+  Sobre, grafia "Vinicolo" sem acento, GTM `GTM-W77MXFWX` no `<head>`/`<body>` de cada página). Comparar com `git diff` antes de commitar um export novo.
 - A pasta `uploads/` do export original (fotos brutas, ~45 MB) não é referenciada por nenhuma
   página e ficou fora do repo de propósito.
