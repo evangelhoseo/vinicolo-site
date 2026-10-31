@@ -29,7 +29,7 @@ INDEX = RAIZ / "index.html"
 DOMINIO = "https://vinicolo.com.br/"
 # Só passe para True depois que o DNS do domínio apontar para o GitHub Pages (ver README):
 # o CNAME faz o Pages redirecionar o endereço github.io para o domínio.
-DOMINIO_LIGADO = False
+DOMINIO_LIGADO = True
 
 OG_IMAGEM = "og-image.jpg"
 FAVICON = "assets/logo-symbol-positiva.svg"

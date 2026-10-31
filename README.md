@@ -2,10 +2,10 @@
 
 Site da **Vinícolo** (vinhos). Cliente da Agência Foco Digital.
 
-- **No ar (revisão):** https://evangelhoseo.github.io/vinicolo-site/
+- **No ar:** https://vinicolo.com.br/ (o endereço github.io redireciona para ele)
 - **Hospedagem:** GitHub Pages, branch `main`, pasta raiz. Push na `main` republica em ~1 min.
-- **Domínio próprio:** `vinicolo.com.br` — em migração (ver "Ligar o domínio"). Canonical, OG e
-  sitemap já apontam para ele.
+- **Domínio:** ligado em 31/10/2026 (ver "Ligar o domínio"). O arquivo `CNAME` é gerado pelo
+  `build.py` com `DOMINIO_LIGADO = True` — não apagar.
 
 ## Como funciona
 
@@ -77,6 +77,8 @@ Tags existentes: `v2026-08-07` — estado publicado antes de o repo ganhar `buil
 Domínio, DNS e **e-mail** (`contato@vinicolo.com.br`) estão na **GoDaddy** (nameservers
 `ns17/ns18.domaincontrol.com`). Até a virada, o domínio serve um site de uma página só feito no
 construtor da GoDaddy — sem outras URLs, então não há redirecionamento a fazer.
+
+Feito em 31/10/2026 (passos 1–5). Fica o registro para o caso de refazer em outro domínio.
 
 **A ordem importa: primeiro o DNS, depois o CNAME no repo.** Na ordem inversa o Pages passa a
 redirecionar o endereço github.io para um domínio que ainda mostra o site antigo.
